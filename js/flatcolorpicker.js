@@ -132,7 +132,7 @@ var fcpcolor = ["1E824C",
         $(this).css('background','#'+$(this).text());
       });
     
-      $(col).on('click',function(e) {
+      pop.on('click','.flatcolorpicker-item',function(e) {
         inp.val('#'+$(this).text()).change();
         
         rec.find("div:contains('"+$(this).text()+"')" ).remove();
