@@ -4,53 +4,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <title>Flat Color Picker, responsive (support mobile) flat UI color picker by takien.com</title>
-<script src="//code.jquery.com/jquery.min.js"></script>
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="js/flatcolorpicker.js"></script>
 <link href="css/flatcolorpicker.css" rel="stylesheet" type="text/css" />
 
-  <style>.quick-links {
-          min-height: 30px;
-          margin: 30px 0 0 0;
-          padding: 5px 20px;
-          list-style: none;
-          text-align: center;
-          overflow: hidden;
-        }
-        .quick-links:first-child {
-          min-height: 0;
-        }
-        .quick-links li {
-          display: inline;
-          margin: 0 8px;
-          color: #999;
-        }
-        .quick-links .github-btn,
-        .quick-links .tweet-btn,
-        .quick-links .follow-btn,
-        .quick-links .gplus-btn,
-        .quick-links .fb-btn,
-        .quick-links .github-fork-btn {
-          position: relative;
-          top: 5px;
-        }</style>
+<style>
+.quick-links {
+  min-height: 30px;
+  margin: 30px 0 0 0;
+  padding: 5px 20px;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+}
+.quick-links:first-child {
+  min-height: 0;
+}
+.quick-links li {
+  display: inline;
+  margin: 0 8px;
+  color: #999;
+}
+.quick-links .github-btn,
+.quick-links .tweet-btn,
+.quick-links .follow-btn,
+.quick-links .gplus-btn,
+.quick-links .fb-btn,
+.quick-links .github-fork-btn {
+  position: relative;
+  top: 5px;
+}
+</style>
 </head>
 <body>
   <a href="https://github.com/takien/FlatColorPicker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
   <div class="container">
-    <h1>Flat color picker</h1>
+    <h1>Flat color picker <span class="small">v0.2</span></h1>
     <p>
     Flat color picker for Bootstrap.
     </p>
     <hr>
     <form>
-        <input type="text" class="form-control flatcolorpicker" title="Pick color" data-placement="bottom" placeholder="#FFFFFF">
+        <input type="text" class="form-control flatcolorpicker" title="Pick color" data-placement="bottom" placeholder="#FFFFFF" value="#FFFFFF">
     </form>
     
      <ul class="quick-links">
         <li class="fb-btn">
-            <fb:like layout="button_count" send="false" href="http://takien.github.io/FlatColorPicker/"></fb:like>
+            <fb:like layout="button_count" send="false" href="https://www.facebook.com/takien"></fb:like>
         </li>
         <li class="follow-btn">
             <a href="https://twitter.com/cektkp" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @cektkp</a>
@@ -71,21 +71,23 @@
         <li>Flat color</li>
         <li>Responsive</li>
         <li>Displays recent selection</li>
+        <li>Color search/filter</li>
+        <li>Displays color name, HEX code and RGB</li>
         <li>Lightweight</li>
     </ul>
     <h2>Todo</h2>
     <ul>
-        <li>RGB/RGBA color code</li>
-        <li>Reorder color pallete</li>
-        <li>Add human recognized color name</li>
-        <li>Color filtering / grouping</li>
+        <li>Turn on/off features</li>
         <li>May be add possibility to attach color picker on button other than input</li>
+        <li>More options</li>
+        <li>Documentation</li>
     </ul>
     <h2>Dependencies</h2>
     <ul>
         <li>jQuery</li>
         <li>Bootstrap CSS</li>
         <li>Bootstrap JS (including Popover)</li>
+        <li>jQuery xcolor plugin</li>
     </ul>
     
     <h2>Screenshots</h2>
@@ -102,6 +104,7 @@
         <li>http://flatuicolors.com/ (color reference) </li>
         <li>http://www.flatuicolorpicker.com/ (color reference) </li>
         <li>http://jsbin.com/ (Yes, I created this using JSbin.com editor) </li>
+        <li>https://github.com/infusion/jQuery-xcolor (jQuery xcolor plugin) </li>
     </ul>
     <h2>Docs</h2>
     <p>Libraries</p>
@@ -119,7 +122,7 @@
 </pre>
     
     <h2>Download</h2>
-    <p><a href="https://github.com/takien/FlatColorPicker" target="_blank">https://github.com/takien/FlatColorPicker</a></p>
+    <p><a href="https://github.com/takien/FlatColorPicker/releases" target="_blank">https://github.com/takien/FlatColorPicker/releases</a></p>
   
   
   
@@ -129,6 +132,16 @@
         <p>&copy; 2014 - by <a href="http://takien.com" target="_blank">Takien.com</a></p>
     </div>
     </footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="js/jquery.xcolor.min.js"></script>
+<script src="js/flatcolorpicker.js"></script>
+<script>
+jQuery(document).ready(function($) {
+ $('.flatcolorpicker').flatcolorpicker({
+ });
+});
+</script>	
     <!--for docs purpose only :p-->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

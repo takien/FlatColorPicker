@@ -10,6 +10,13 @@
   height:40px;
   text-align:center;
   cursor:pointer;
+  line-height:40px;
+  vertical-align:middle;
+  overflow:hidden;
+  -webkit-user-select: none;  
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .flatcolorpicker-popover .close {
   margin-right:10px;
@@ -17,9 +24,37 @@
 }
 .flatcolorpicker-recent {
   margin-bottom:1px;
-  height:40px
+  height:40px;
 }
 
 .flatcolorpicker-content {
 
+}
+.flatcolorpicker-filter {
+  margin-bottom:1px
+}
+.flatcolorpicker-popover .nav-tabs > li > a{
+  padding:5px;
+  border-top-color:transparent; 
+  border-radius:0;
+}
+.flatcolorpicker-rgb,
+.flatcolorpicker-name {
+  display:none
+}
+.flatcolorpicker-hex {
+  text-transform:uppercase
+}
+.flatcolorpicker-display-filter {
+  margin-bottom:1px
+}
+.flatcolorpicker-popover .btn,
+.flatcolorpicker-popover input {
+  border-radius:0 !important
+}
+.flatcolorpicker-popover .col-sm-6:nth-child(1){
+	padding-right:0
+}
+.flatcolorpicker-popover .col-sm-6:nth-child(2){
+	padding-left:0
 }
